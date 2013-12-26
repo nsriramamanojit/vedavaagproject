@@ -1,0 +1,25 @@
+<h1>Listing current_projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @current_projects.each do |current_project| %>
+      <tr>
+        <td><%= link_to 'Show', current_project %></td>
+        <td><%= link_to 'Edit', edit_current_project_path(current_project) %></td>
+        <td><%= link_to 'Destroy', current_project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Current project', new_current_project_path %>
